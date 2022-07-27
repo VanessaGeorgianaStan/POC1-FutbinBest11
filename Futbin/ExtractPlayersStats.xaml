@@ -1,11 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ExtractPlayersStats" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_dtPlayersStats" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_dt_playersStats" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>675,724</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>603,724</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractPlayersStats_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -95,7 +95,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[out_dtPlayersStats]" DisplayName="Extract Structured Data dtPlayersStats" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Name' attr='text' /&gt;&lt;column name='RAT' attr='text' /&gt;&lt;column name='POS' attr='text' /&gt;&lt;column name='VER' attr='text' /&gt;&lt;column name='PS' attr='text' /&gt;&lt;column name='SKI' attr='text' /&gt;&lt;column name='WF' attr='text' /&gt;&lt;column name='WR' attr='text' /&gt;&lt;column name='PAC' attr='text' /&gt;&lt;column name='SHO' attr='text' /&gt;&lt;column name='PAS' attr='text' /&gt;&lt;column name='DRI' attr='text' /&gt;&lt;column name='DEF' attr='text' /&gt;&lt;column name='PHY' attr='text' /&gt;&lt;column name='Height' attr='text' /&gt;&lt;column name='Popularity' attr='text' /&gt;&lt;column name='BS' attr='text' /&gt;&lt;column name='IGS' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="0" NextLinkSelector="&lt;webctrl aaname='                                 »                              *' tag='A' /&gt;" SimulateClick="True">
+              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[out_dt_playersStats]" DisplayName="Extract Structured Data dtPlayersStats" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Name' attr='text' /&gt;&lt;column name='RAT' attr='text' /&gt;&lt;column name='POS' attr='text' /&gt;&lt;column name='VER' attr='text' /&gt;&lt;column name='PS' attr='text' /&gt;&lt;column name='SKI' attr='text' /&gt;&lt;column name='WF' attr='text' /&gt;&lt;column name='WR' attr='text' /&gt;&lt;column name='PAC' attr='text' /&gt;&lt;column name='SHO' attr='text' /&gt;&lt;column name='PAS' attr='text' /&gt;&lt;column name='DRI' attr='text' /&gt;&lt;column name='DEF' attr='text' /&gt;&lt;column name='PHY' attr='text' /&gt;&lt;column name='Height' attr='text' /&gt;&lt;column name='Popularity' attr='text' /&gt;&lt;column name='BS' attr='text' /&gt;&lt;column name='IGS' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="0" NextLinkSelector="&lt;webctrl aaname='                                 »                              *' tag='A' /&gt;" SimulateClick="True">
                 <ui:ExtractData.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bae02ff2-7419-4e6e-bed3-cd3ee12193aa" InformativeScreenshot="3e98a91fa01dca08907b0b84799e9348" Selector="&lt;webctrl id='repTb' tag='TABLE' /&gt;" WaitForReady="COMPLETE">
                     <ui:Target.TimeoutMS>

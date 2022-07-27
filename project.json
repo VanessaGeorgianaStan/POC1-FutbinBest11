@@ -3,7 +3,6 @@
   "description": "Navigate to Futbin main page and Extract players' stats to data table",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Mail.Activities": "[1.15.2]",
     "UiPath.System.Activities": "[22.4.1]",
     "UiPath.Testing.Activities": "[22.4.3]",
@@ -43,39 +42,63 @@
     "fileInfoCollection": [
       {
         "editingStatus": "InProgress",
-        "testCaseId": "11d6466b-c99d-4a0c-a594-238d1b28e1bd",
-        "testCaseType": "TestCase",
-        "fileName": "Futbin\\TestCase-NavigateToFutbin.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "38da7ce3-77d2-48ec-8e22-6c1988925152",
-        "testCaseType": "TestCase",
-        "fileName": "Futbin\\TestCase-NavigateToPlayersPage.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
         "testCaseId": "3bc5cd49-7353-4574-9218-733144773734",
         "testCaseType": "TestCase",
-        "fileName": "Futbin\\TestCase-SelectLeagues.xaml"
+        "fileName": "Test Cases\\TestCase-SelectLeagues.xaml"
       },
       {
         "editingStatus": "InProgress",
-        "testCaseId": "5e80e08f-f06f-4b08-97f6-4dceb3627b0d",
+        "testCaseId": "bbc45d06-4537-44ee-a8ca-b079f156c43f",
         "testCaseType": "TestCase",
-        "fileName": "Futbin\\TestCase-FilterPlayerVersion.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "d383dd3a-d78c-4b31-b575-608dd9f3cbc8",
-        "testCaseType": "TestCase",
-        "fileName": "Futbin\\TestCase-ExtractPlayersStats.xaml"
+        "fileName": "Test Cases\\TestCase-SearchSquadPlayer.xaml"
       },
       {
         "editingStatus": "InProgress",
         "testCaseId": "b096558c-bfcc-4c19-b3b0-8e20ab21d5cf",
         "testCaseType": "TestCase",
-        "fileName": "Futbin\\TestCase-NavigateToSquadBuilder.xaml"
+        "fileName": "Test Cases\\TestCase-NavigateToSquadBuilder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "38da7ce3-77d2-48ec-8e22-6c1988925152",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase-NavigateToPlayersPage.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "11d6466b-c99d-4a0c-a594-238d1b28e1bd",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase-NavigateToFutbin.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "5e80e08f-f06f-4b08-97f6-4dceb3627b0d",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase-FilterPlayerVersion.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d383dd3a-d78c-4b31-b575-608dd9f3cbc8",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase-ExtractPlayersStats.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f40dc9fc-01bc-44ad-b55f-e9c931cfb2a4",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase-SquadBuilder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "fdfeba09-a56f-4b81-b6c7-f746ed83c724",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase-SaveSquad.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "59a8e9fe-ed32-4f91-9d9f-d317a8b416df",
+        "testCaseType": "TestCase",
+        "fileName": "Test Cases\\TestCase-SendEmail.xaml"
       }
     ],
     "modernBehavior": false
