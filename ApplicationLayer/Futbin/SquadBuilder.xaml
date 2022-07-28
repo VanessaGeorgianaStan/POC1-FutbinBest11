@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>588,1384</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>657,1384</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SquadBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="58">
@@ -70,43 +70,48 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SquadBuilder" sap:VirtualizedContainerService.HintSize="476,1319" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SquadBuilder" sap:VirtualizedContainerService.HintSize="489,1319" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="playerPositions" />
       <Variable x:TypeArguments="x:String" Name="playerRole" />
       <Variable x:TypeArguments="x:String" Name="playerName" />
-      <Variable x:TypeArguments="x:Int32" Default="1" Name="cardId" />
+      <Variable x:TypeArguments="x:Int32" Name="cardId">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="1" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - SquadBuilder" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;SquadBuilder&quot;]" />
-    <ui:FindChildren Children="[playerPositions]" DisplayName="Find squad positions" Filter="&lt;webctrl tag='DIV' parentclass='grsarea structure433' innertext='.*\w+.*' matching:innertext='regex' /&gt;" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+    <ui:LogMessage DisplayName="Log Message - SquadBuilder" sap:VirtualizedContainerService.HintSize="447,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start SquadBuilder&quot;]" />
+    <ui:FindChildren Children="[playerPositions]" DisplayName="Find squad positions" Filter="&lt;webctrl tag='DIV' parentclass='grsarea structure433' innertext='.*\w+.*' matching:innertext='regex' /&gt;" sap:VirtualizedContainerService.HintSize="447,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
       <ui:FindChildren.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c7012b31-fd0f-46e7-944a-4c8d4793f83f" InformativeScreenshot="ac389c2625c8b8bb7df53ac1a129b8b4" Selector="&lt;html app='msedge.exe' title='FIFA 22 Squad Builder | FUTBIN' /&gt;&lt;webctrl parentid='allplayers' tag='DIV' class='grsarea structure433' /&gt;" WaitForReady="COMPLETE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c7012b31-fd0f-46e7-944a-4c8d4793f83f" InformativeScreenshot="ac389c2625c8b8bb7df53ac1a129b8b4" Selector="&lt;html app='msedge.exe' title='FIFA*' /&gt;&lt;webctrl parentid='allplayers' tag='DIV' class='grsarea structure433' /&gt;" WaitForReady="COMPLETE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:FindChildren.Target>
     </ui:FindChildren>
-    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each position" sap:VirtualizedContainerService.HintSize="434,950" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[playerPositions]">
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each position" sap:VirtualizedContainerService.HintSize="447,950" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[playerPositions]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ui:UiElement">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:UiElement" Name="playerPosition" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body build squad" sap:VirtualizedContainerService.HintSize="376,826" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body build squad" sap:VirtualizedContainerService.HintSize="411,826" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="innertext" DisplayName="Get Attribute player Role" sap:VirtualizedContainerService.HintSize="334,182" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="innertext" DisplayName="Get Attribute player Role" sap:VirtualizedContainerService.HintSize="369,182" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
               <ui:GetAttribute.Result>
                 <OutArgument x:TypeArguments="x:String">[playerRole]</OutArgument>
               </ui:GetAttribute.Result>
@@ -121,7 +126,7 @@
                 </ui:Target>
               </ui:GetAttribute.Target>
             </ui:GetAttribute>
-            <Assign DisplayName="Assign playerRole" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Assign playerRole" sap:VirtualizedContainerService.HintSize="369,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[playerRole]</OutArgument>
               </Assign.To>
@@ -129,7 +134,7 @@
                 <InArgument x:TypeArguments="x:String">[system.Text.RegularExpressions.Regex.Match(playerRole,"(?&lt;=.*)(\w+)(?=.*)").Value]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign playerName" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Assign playerName" sap:VirtualizedContainerService.HintSize="369,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[playerName]</OutArgument>
               </Assign.To>
@@ -137,14 +142,14 @@
                 <InArgument x:TypeArguments="x:String">[in_dt_playersStats.AsEnumerable.Where(function(x) x("POS").ToString = playerRole).First()("Name").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SearchSquadPlayer " sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Futbin\SearchSquadPlayer.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SearchSquadPlayer " sap:VirtualizedContainerService.HintSize="369,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ApplicationLayer\Futbin\SearchSquadPlayer.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_playerName">[playerName]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_playerPosition">[playerRole]</InArgument>
                 <InArgument x:TypeArguments="x:Int32" x:Key="in_cardId">[cardId]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <Assign DisplayName="Remove current player" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Remove current player" sap:VirtualizedContainerService.HintSize="369,60" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">[in_dt_playersStats]</OutArgument>
               </Assign.To>
@@ -152,7 +157,7 @@
                 <InArgument x:TypeArguments="sd:DataTable">[in_dt_playersStats.AsEnumerable.Where(function(x) NOT(x("Name").ToString.Contains(playerName))).CopyToDataTable]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign cardId" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign DisplayName="Assign cardId" sap:VirtualizedContainerService.HintSize="369,60" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[cardId]</OutArgument>
               </Assign.To>
