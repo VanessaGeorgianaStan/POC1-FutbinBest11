@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>878,807</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>930,927</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NavigateToFutbin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -37,10 +37,11 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="26">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -67,9 +68,10 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NavigateToFutbin" sap:VirtualizedContainerService.HintSize="888,742" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NavigateToFutbin" sap:VirtualizedContainerService.HintSize="940,862" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="elementExistsFutbin" />
     </Sequence.Variables>
@@ -78,10 +80,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - NavigateToFutbin" sap:VirtualizedContainerService.HintSize="846,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;NavigateToFutbin&quot;]" />
-    <ui:UiElementExists DisplayName="Element Exists Futbin" Exists="[elementExistsFutbin]" sap:VirtualizedContainerService.HintSize="846,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:LogMessage DisplayName="Log Message - NavigateToFutbin" sap:VirtualizedContainerService.HintSize="898,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start NavigateToFutbin&quot;]" />
+    <ui:UiElementExists DisplayName="Element Exists Futbin" Exists="[elementExistsFutbin]" sap:VirtualizedContainerService.HintSize="898,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59b09f71-fa72-4e70-882d-4ecc6de3263a" InformativeScreenshot="d79f85408161ec9a22d9a64a719ec476" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='FIFA 22 Ultimate Team Prices, Squad Builder, Draft and Players D*' /&gt;&lt;ctrl name='FIFA 22 Ultimate Team Prices, Squad Builder, Draft and Players D*' role='document' /&gt;&lt;ctrl name='Logo' role='graphic' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59b09f71-fa72-4e70-882d-4ecc6de3263a" InformativeScreenshot="d79f85408161ec9a22d9a64a719ec476" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='FIFA*' /&gt;&lt;ctrl name='Logo' role='graphic' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -91,9 +93,21 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[elementExistsFutbin]" DisplayName="If element exists" sap:VirtualizedContainerService.HintSize="846,373" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[elementExistsFutbin]" DisplayName="If element exists" sap:VirtualizedContainerService.HintSize="898,493" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <ui:LogMessage DisplayName="Log Message Futbin is opened" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Futbin is already opened.&quot;]" />
+        <Sequence DisplayName="Sequence page alreawdy opened" sap:VirtualizedContainerService.HintSize="386,335" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message Futbin is opened" sap:VirtualizedContainerService.HintSize="344,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Futbin is already opened.&quot;]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CloseProccess" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ApplicationLayer\Futbin\CloseProccess.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
       </If.Then>
       <If.Else>
         <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser Futbin" sap:VirtualizedContainerService.HintSize="467,215" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="[in_futbinURL]">

@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_NavigateToFutbin" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="786,996" sap2010:WorkflowViewState.IdRef="TestCase_NavigateToFutbin_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_SearchSquadPlayer" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="786,1196" sap2010:WorkflowViewState.IdRef="TestCase_SearchSquadPlayer_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="44">
+    <scg:List x:TypeArguments="x:String" Capacity="29">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -33,7 +33,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -66,30 +66,48 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCase_NavigateToFutbin" sap:VirtualizedContainerService.HintSize="796,931" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestCase_SearchSquadPlayer" sap:VirtualizedContainerService.HintSize="796,1131" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="futbinURL" />
+      <Variable x:TypeArguments="x:String" Name="playerName" />
+      <Variable x:TypeArguments="x:String" Name="playerRole" />
+      <Variable x:TypeArguments="x:Int32" Name="cardId" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - TestCase-NavigateToFutbin" sap:VirtualizedContainerService.HintSize="754,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;TestCase-NavigateToFutbin&quot;]" />
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="754,152" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message TestCase-SearchSquadPlayer" sap:VirtualizedContainerService.HintSize="754,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start TestCase-SearchSquadPlayer&quot;]" />
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="754,352" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Assign futbinURL" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="Assign playerName" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[futbinURL]</OutArgument>
+          <OutArgument x:TypeArguments="x:String">[playerName]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">www.futbin.com</InArgument>
+          <InArgument x:TypeArguments="x:String">Cristiano Ronaldo</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign playerRole" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[playerRole]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">ST</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign cardId" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[cardId]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[cardId+1]</InArgument>
         </Assign.Value>
       </Assign>
     </Sequence>
@@ -99,9 +117,11 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="NavigateToFutbin" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Futbin\NavigateToFutbin.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SearchSquadPlayer" sap:VirtualizedContainerService.HintSize="369,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ApplicationLayer\Futbin\SearchSquadPlayer.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_futbinURL">[futbinURL]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_playerName">[playerName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_playerPosition">[playerRole]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_cardId">[cardId]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
@@ -114,7 +134,7 @@
       <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute with element exists" sap:VirtualizedContainerService.HintSize="712,180" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
         <uta:VerifyControlAttribute.ActivityToTest>
           <ActivityAction>
-            <ui:UiElementExists DisplayName="Element Exists  Futbin" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists DisplayName="Element Exists Ronaldo" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Exists>
                 <OutArgument x:TypeArguments="x:Boolean">
                   <VariableReference x:TypeArguments="x:Boolean">
@@ -125,7 +145,7 @@
                 </OutArgument>
               </ui:UiElementExists.Exists>
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8970e5f-ab45-478b-b0ae-ae7a54774730" InformativeScreenshot="32cd851a0f397a27e7b1ef426528d8ac" Selector="&lt;html app='msedge.exe' title='FIFA 22 Ultimate Team Prices, Squad Builder, Draft and Players Database | FUTBIN' /&gt;&lt;webctrl aaname='Logo' tag='IMG' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="99f2c954-944d-42f0-ae64-78bcac6321cc" InformativeScreenshot="fd11ef75a7b02a0d964f59b55e9e92bc" Selector="&lt;html app='msedge.exe' title='FIFA 22 Squad Builder | FUTBIN' /&gt;&lt;webctrl aaname='Ronaldo' parentid='pcardp1' tag='DIV' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
